@@ -1,6 +1,7 @@
 .container{
     display: flex;
     justify-content: center;
+    
 }
 .container-button{
     display:flex ;
@@ -28,12 +29,16 @@
 } .green{
     background-color:greenyellow ;
 }
+ .purple{
+    background-color:purple ;
+}
 .traficc-light{
     background-color: black;
     padding: 10px;
     display: inline-block;
     margin: auto;
 }
+
 .glow{
     box-shadow: 0 0 9px 4px #747DE8;
 }

@@ -6,32 +6,42 @@ import React, { useState } from "react";
 //create your first component
 const Home = () => {
 	const [selectedColor, setSelectedColor] = useState("");
+
+	
 	const getRandom = (color) => {
 		return color[Math.floor(Math.random() * color.length)];
-	  };
-	let color=["red","yellow","green"]
+	};
+	let color = ["red", "yellow", "green", "purple"]
+
 	return (
 		<><div className="stick container"></div>
-		<div className="container">
-			<div className="traficc-light">
-				<div
-					onClick={() => setSelectedColor(color[0])}
-					className={"light red" + (selectedColor === "red" ? " glow" : "")
-					}></div>
-				<div
-					onClick={() => setSelectedColor(color[1])}
-					className={"light yellow " + (selectedColor === "yellow" ? " glow" : "")
-					}></div>
-				<div
-					onClick={() => setSelectedColor(color[2])}
-					className={"light green " + (selectedColor === "green" ? " glow" : "")
-					}></div>
-			</div>
+			<div className="container">
+				<div className="traficc-light">
+					<div
+						onClick={() => setSelectedColor(color[0])}
+						className={"light red" + (selectedColor === "red" ? " glow" : "")
+						}></div>
+					<div
+						onClick={() => setSelectedColor(color[1])}
+						className={"light yellow " + (selectedColor === "yellow" ? " glow" : "")
+						}></div>
+					<div
+						onClick={() => setSelectedColor(color[2])}
+						className={"light green " + (selectedColor === "green" ? " glow" : "")
+						}></div>
+					<div
+						onClick={() => setSelectedColor(color[3])}
+						className={"light purple " + (selectedColor === "purple" ? " glow" : "")
+						}></div>
+
+				</div>
 			</div>
 			<div className="container-button">
-			<button onClick={() => setSelectedColor(getRandom(color))}> Button
-			</button>
+				<button onClick={() => setSelectedColor(getRandom(color))}> Random
+				</button>
 			</div>
+
+			
 		</>
 	);
 };
